@@ -7,10 +7,11 @@ star_wars_matrix = matrix(c(new_hope,empire_strikes,return_jedi),nrow=3,byrow=TR
 rownames(star_wars_matrix) = c('A New Hope','The Empire Strikes Back','Return of the Jedi')
 colnames(star_wars_matrix)= c('US','non-US')
 #punto 3 ----
-worlwide_vector = c(sum(new_hope),sum(empire_strikes),sum(star_wars_matrix))
+  worlwide_vector = c(sum(new_hope),sum(empire_strikes),sum(return_jedi))
 #punto 4----
 star_wars_matrix = cbind(star_wars_matrix, all_wars_matrix = worlwide_vector)
 #punto 5 ----
 non_us_all =star_wars_matrix[,"non-US"]
+sum(non_us_all)
 mean(non_us_all)
              

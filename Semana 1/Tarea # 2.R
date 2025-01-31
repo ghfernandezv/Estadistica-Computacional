@@ -16,6 +16,9 @@ planets_df[planets_df$name == 'Mars', ]
 planets_df[1:5, 'diameter']
 #tres formas de seleccionar la variable rings
 rings_vector = c(planets_df[, 'rings'],planets_df[, 5],planets_df$rings)
+rings_vector=planets_df$rings
+#seleccionando los planetas que tienen anillos
+anillos = planets_df$name[rings_vector==TRUE]
 #utilizando subset()
 subset(planets_df, diameter < 1, select = name)
 #ordenando los planetas

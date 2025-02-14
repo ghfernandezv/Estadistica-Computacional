@@ -148,6 +148,7 @@ metodo_de_pesca_2 = nth(metodo, 2, default = NA)
   
 fishing_analysis= df %>%
   left_join(fishing_methods_unificado,by="lago")
+print(fishing_analysis)
 
 ## Inciso v
 final_fishing1 = fishing_analysis %>% 
@@ -160,3 +161,5 @@ final_fishing2 = fishing_analysis %>%
 
 # En este caso, da lo mismo sumar final_fishing 1 o 2 dado que ambos contabilizan lo mismo
 final_fishing2  %>% summarise(totalfinal = sum(total_cantidad))
+
+#En total se capturaron : 243 peces.
